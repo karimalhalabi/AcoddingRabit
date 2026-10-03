@@ -1,0 +1,61 @@
+.account {
+  text-align: center;
+}
+.avatar {
+  height: 62px;
+  width: 62px;
+  background: #e9e0d1;
+  color: var(--rust);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--serif);
+  font-size: 30px;
+  margin: 0 auto 18px;
+}
+.account h2 {
+  font-family: var(--serif);
+  font-size: 27px;
+  font-weight: 400;
+}
+.account > p {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 10px 0 23px;
+}
+.orders {
+  text-align: start;
+  margin: 25px 0;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.orders h3 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+.orders > p {
+  font-size: 11px;
+  color: var(--muted);
+  padding: 8px 0;
+}
+.orders > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  padding: 12px 0;
+}
+.orders small {
+  display: block;
+  color: var(--muted);
+  font-size: 9px;
+  margin-top: 5px;
+}
+.orders strong {
+  font-weight: 500;
+}

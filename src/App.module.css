@@ -1,0 +1,34 @@
+.app {
+  height: 100dvh;
+}
+.main {
+  position: fixed;
+  inset: 125px 0 75px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+.container {
+  max-width: 1460px;
+  width: 91.4%;
+  margin: 0 auto;
+  padding: 24px 0 28px;
+}
+.error {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  font-family: var(--serif);
+  font-size: 26px;
+}
+@media (max-width: 550px) {
+  .container {
+    width: auto;
+    margin: 0 18px;
+    padding-top: 18px;
+  }
+}
