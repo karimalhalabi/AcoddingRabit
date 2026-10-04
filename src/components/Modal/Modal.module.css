@@ -1,0 +1,277 @@
+.backdrop {
+  position: fixed;
+  inset: 125px 0 75px;
+  background: #283e3255;
+  backdrop-filter: blur(7px);
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  animation: fadeIn 0.2s ease;
+}
+.modal {
+  background: #fafaf2;
+  width: min(880px, 100%);
+  max-height: 100%;
+  overflow: auto;
+  border: 1px solid #e7e8d7;
+  border-radius: 17px;
+  padding: 26px 30px 30px;
+  box-shadow: 0 24px 80px #23351c26;
+}
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.eyebrow {
+  font-size: 8px;
+  letter-spacing: 1.8px;
+  color: #929b7f;
+}
+.modalHeader button {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #edefe2;
+  color: #6e7b5c;
+}
+.modal > h2 {
+  font-family: var(--serif);
+  font-size: 34px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin: 5px 0 10px;
+}
+.intro {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #92987f;
+  margin: 0 0 24px;
+}
+.mapGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 17px 13px;
+}
+.shopGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.shopIntro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.shopIntro .intro {
+  margin: 0;
+}
+.shopIntro > span {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  color: #bd8350;
+  font-size: 18px;
+  white-space: nowrap;
+}
+.shopIntro small {
+  font-size: 9px;
+  color: #919881;
+}
+.guideGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.guideGrid article {
+  border: 1px solid #e3e7d8;
+  background: #f5f5e9;
+  border-radius: 10px;
+  padding: 17px;
+}
+.guideGrid h3 {
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+.guideGrid p {
+  font-size: 11px;
+  line-height: 1.8;
+  color: #879375;
+  margin: 0;
+}
+.orbSamples {
+  height: 60px;
+  display: flex;
+}
+.orbSamples > * {
+  width: 20%;
+}
+.waterSample {
+  height: 60px;
+  width: 60px;
+  margin: auto;
+}
+.humanGuide {
+  grid-column: 1/-1;
+}
+.humanSamples {
+  height: 108px;
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+}
+.humanSamples > * {
+  width: 10%;
+  height: 100%;
+}
+.dragonSamples {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.dragonSamples > * {
+  width: 100px;
+}
+.helpContent {
+  text-align: center;
+  max-width: 530px;
+  margin: auto;
+}
+.helpHero {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  background: radial-gradient(ellipse, #ecdebb, transparent 70%);
+}
+.helpContent h3 {
+  font-family: var(--serif);
+  font-size: 25px;
+  font-weight: 500;
+  margin: 7px 0 22px;
+}
+.helpContent p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #889478;
+}
+.keyRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 20px;
+}
+.keyRow kbd {
+  min-width: 27px;
+  height: 27px;
+  padding: 5px 10px;
+  font-size: 11px;
+}
+.keyRow > span {
+  font-size: 10px;
+  color: #7e8d6e;
+  margin-inline-end: 10px;
+}
+.primaryButton {
+  background: #e47c49;
+  color: #fff8e8;
+  border: 1px solid #e9915e;
+  border-radius: 7px;
+  padding: 11px 17px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  font-size: 11px;
+  justify-content: center;
+  margin: 24px auto 0;
+}
+.smallModal {
+  max-width: 440px;
+}
+.smallModal h2 {
+  font-size: 28px;
+}
+.confirmButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 11px;
+}
+.confirmButtons .primaryButton {
+  margin: 0;
+}
+.confirmButtons > button:first-child {
+  color: #7e8b6a;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 650px) {
+  .backdrop {
+    padding: 12px;
+  }
+  .modal {
+    padding: 18px;
+  }
+  .modal > h2 {
+    font-size: 29px;
+  }
+  .mapGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .shopGrid {
+    grid-template-columns: 1fr;
+  }
+  .shopIntro {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .shopIntro small {
+    font-size: 9px;
+  }
+  .guideGrid {
+    gap: 10px;
+  }
+  .guideGrid article {
+    padding: 12px;
+  }
+  .humanSamples {
+    height: auto;
+    flex-wrap: wrap;
+  }
+  .humanSamples > * {
+    width: 20%;
+    height: 90px;
+  }
+  .guideGrid p {
+    font-size: 10px;
+  }
+  .helpContent h3 {
+    font-size: 22px;
+  }
+  .keyRow {
+    gap: 4px;
+  }
+  .keyRow > span {
+    margin-inline-end: 4px;
+    font-size: 9px;
+  }
+}

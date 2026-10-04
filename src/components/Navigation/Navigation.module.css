@@ -1,0 +1,76 @@
+.navigation {
+  height: 25px;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
+  background: #fafaf7;
+  z-index: 30;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 max(4.3vw, 24px);
+  border-bottom: 1px solid #e3e6dc;
+}
+.links {
+  display: flex;
+  gap: 31px;
+  height: 100%;
+}
+.links button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #777e70;
+  height: 100%;
+  padding-bottom: 5px;
+  position: relative;
+}
+.links button.active {
+  color: #bf612f;
+}
+.active:after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #df7c48;
+  border-radius: 5px;
+}
+.dot {
+  width: 4px;
+  height: 4px;
+  background: #cf9b58;
+  border-radius: 50%;
+}
+.navNote {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 7px;
+  letter-spacing: 1.25px;
+  color: #8e9484;
+  padding-bottom: 5px;
+}
+.navNote > span {
+  width: 4px;
+  height: 4px;
+  background: #9aac82;
+  border-radius: 50%;
+}
+@media (max-width: 650px) {
+  .navigation {
+    padding: 0 20px;
+  }
+  .links {
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+  }
+  .navNote {
+    display: none;
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "ember-quest",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "start": "react-scripts start",
+    "build": "vite build",
+    "build:cra": "react-scripts build",
+    "test": "node --test src/util/help.test.mjs",
+    "format": "prettier --write src public index.html README.md"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "phaser": "4.2.1",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.9",
+    "vite": "8.3.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  }
+}

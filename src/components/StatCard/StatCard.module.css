@@ -1,0 +1,117 @@
+.statCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fffefa;
+  border: 1px solid #e6e7dd;
+  border-radius: 11px;
+  padding: 15px 17px;
+  min-width: 0;
+  position: relative;
+}
+.statIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+  color: #d88148;
+  background: #fcf0e3;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.statBody {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+.statLabel {
+  font-size: 8px;
+  letter-spacing: 1.4px;
+  font-weight: 600;
+  color: #848b78;
+  white-space: nowrap;
+}
+.statBody strong {
+  font-size: 23px;
+  line-height: 1.2;
+  margin-top: 4px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  font-variant-numeric: tabular-nums;
+}
+.statBody strong small {
+  font-size: 10px;
+  font-weight: 400;
+  color: #909482;
+  margin-inline-start: 5px;
+}
+.note {
+  font-size: 8px;
+  color: #919783;
+  margin-top: 1px;
+}
+.strengthCard .statIcon {
+  background: #eef1e5;
+  color: #7c9160;
+}
+.meter {
+  height: 4px;
+  background: #edf0e5;
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 108px;
+  margin-top: 5px;
+}
+.meter span {
+  height: 100%;
+  display: block;
+  background: #8da16a;
+  transition: width 0.3s;
+}
+.liveDot {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #9aaa7a;
+}
+@media (max-width: 900px) {
+  .statCard {
+    padding: 12px;
+    gap: 8px;
+  }
+  .statIcon {
+    width: 28px;
+    height: 32px;
+  }
+  .statLabel {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+  .statBody strong {
+    font-size: 21px;
+  }
+}
+
+.statBody strong {
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  .statCard {
+    padding: 12px 10px;
+    gap: 7px;
+  }
+  .statIcon {
+    width: 25px;
+  }
+  .strengthCard .statIcon {
+    display: none;
+  }
+  .liveDot {
+    top: 12px;
+    right: 10px;
+  }
+}

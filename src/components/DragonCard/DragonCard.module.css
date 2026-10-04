@@ -1,0 +1,216 @@
+.dragonCard {
+  border: 1px solid #e4e5d7;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #fdfbf2, #f7f7ec);
+  padding: 18px 19px 0;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  color: #92937a;
+}
+.cardTop span {
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+}
+.portrait {
+  position: relative;
+  width: 210px;
+  height: 205px;
+  margin: 15px 0 8px;
+  display: grid;
+  place-items: center;
+}
+.halo {
+  position: absolute;
+  inset: 12px 23px 8px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, #f1dbad7a, #eee7c62b 65%, transparent 70%);
+}
+.halo:after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border: 1px dashed #dcd2ae80;
+  border-radius: 50%;
+  transform: rotate(10deg);
+}
+.dragon {
+  width: 181px;
+  height: 181px;
+  position: relative;
+  z-index: 2;
+  animation: breathe 4s ease-in-out infinite;
+}
+.groundShadow {
+  position: absolute;
+  width: 90px;
+  height: 10px;
+  background: #89946b26;
+  filter: blur(3px);
+  border-radius: 50%;
+  bottom: 11px;
+  left: 51px;
+}
+.sparkOne,
+.sparkTwo,
+.sparkThree {
+  position: absolute;
+  color: #c5ae78;
+  font-size: 21px;
+  top: 28px;
+  left: 27px;
+}
+.sparkTwo {
+  top: 68px;
+  left: auto;
+  right: 12px;
+  font-size: 10px;
+}
+.sparkThree {
+  top: 113px;
+  left: 19px;
+  font-size: 12px;
+}
+.portraitLeaf {
+  position: absolute;
+  bottom: 6px;
+  right: 10px;
+  color: #98a071;
+  transform: rotate(-24deg);
+}
+.dragonCard h2 {
+  font-family: var(--serif);
+  font-size: 26px;
+  letter-spacing: -0.7px;
+  font-weight: 500;
+  margin: 4px 0 9px;
+  color: #444e37;
+}
+.dragonCard h2 > span {
+  font-size: 20px;
+  color: #d3b271;
+  margin-inline-start: 8px;
+}
+.dragonCard > p {
+  font-size: 10px;
+  line-height: 1.8;
+  text-align: center;
+  white-space: pre-line;
+  color: #93937f;
+  margin: 0 0 12px;
+}
+.dragonStatus {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 8px;
+  color: #899174;
+  margin-bottom: 19px;
+}
+.dragonStatus > span {
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background: #9aab7d;
+}
+.wingUnlock {
+  border-top: 1px solid #e5e3d3;
+  padding: 15px 0 13px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  margin-top: auto;
+}
+.wingIcon {
+  width: 41px;
+  height: 45px;
+  background: #eeeedd;
+  border: 1px solid #e3e4ce;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  color: #adb293;
+}
+.wingUnlock > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.wingUnlock small {
+  font-size: 6px;
+  letter-spacing: 1.3px;
+  color: #a2a489;
+}
+.wingUnlock strong {
+  font-size: 10px;
+  font-weight: 500;
+  color: #7a8269;
+}
+.wingUnlock > div > span {
+  font-size: 8px;
+  color: #a0a38b;
+}
+.wingUnlock > svg {
+  margin-inline-start: auto;
+  color: #a1a68d;
+}
+.shopLink {
+  width: calc(100% + 38px);
+  padding: 11px 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  background: #f0f0e2;
+  border-top: 1px solid #e4e5d5;
+  font-size: 9px;
+  color: #7a8568;
+}
+.shopLink:hover {
+  background: #e9ebdb;
+}
+@keyframes breathe {
+  50% {
+    transform: translateY(-4px) rotate(-1deg);
+  }
+}
+@media (max-width: 1000px) {
+  .portrait {
+    height: 138px;
+    margin: 4px 0 0;
+  }
+  .dragon {
+    height: 133px;
+    width: 133px;
+  }
+  .dragonCard {
+    padding: 15px 14px 0;
+  }
+  .dragonCard h2 {
+    font-size: 23px;
+  }
+  .dragonCard > p {
+    font-size: 9px;
+  }
+  .dragonStatus {
+    margin-bottom: 10px;
+  }
+  .shopLink {
+    width: calc(100% + 28px);
+  }
+}
+@media (max-width: 760px) {
+  .dragonCard {
+    display: none;
+  }
+}

@@ -1,0 +1,70 @@
+.shopBanner {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #f1f0e5;
+  border: 1px solid #e6e4d5;
+  border-radius: 11px;
+  padding: 9px 20px;
+  margin-top: 25px;
+  min-height: 82px;
+}
+.shopDrawing {
+  height: 65px;
+  width: 78px;
+  flex-shrink: 0;
+}
+.shopDrawing svg {
+  height: 100%;
+  width: 100%;
+}
+.shopBanner h3 {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 6px;
+  color: #667052;
+}
+.shopBanner p {
+  font-size: 9px;
+  color: #9a9c83;
+  margin: 0;
+}
+.shopBanner button {
+  margin-inline-start: auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 10px;
+  color: #7c8965;
+  border: 1px solid #d8dec8;
+  padding: 9px 12px;
+  border-radius: 6px;
+  background: #f9f9ef;
+}
+.shopBanner button:hover {
+  background: #e7ebdb;
+}
+@media (max-width: 600px) {
+  .shopBanner {
+    gap: 8px;
+    padding: 9px 12px;
+  }
+  .shopDrawing {
+    width: 50px;
+  }
+  .shopBanner h3 {
+    font-size: 15px;
+  }
+  .shopBanner p {
+    font-size: 8px;
+  }
+  .shopBanner button {
+    font-size: 8px;
+    gap: 5px;
+    padding: 8px;
+  }
+  .shopBanner button svg {
+    display: none;
+  }
+}
