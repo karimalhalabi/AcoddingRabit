@@ -1,0 +1,71 @@
+.auth {
+  text-align: center;
+  padding: 5px 7px 10px;
+}
+.auth > svg {
+  font-size: 42px;
+  color: var(--rust);
+  margin: 0 auto 13px;
+}
+.eyebrow {
+  display: block;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--rust);
+}
+.auth h2 {
+  font-family: var(--serif);
+  font-size: 35px;
+  font-weight: 400;
+  margin: 13px 0;
+}
+.auth h2 > span {
+  color: var(--rust);
+}
+.auth > p {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.auth form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  margin-top: 28px;
+  text-align: start;
+}
+.auth label {
+  font-size: 11px;
+}
+.auth input {
+  font-size: 12px;
+}
+.auth form > button {
+  margin-top: 6px;
+}
+.toggle {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 24px;
+}
+.toggle button {
+  color: var(--rust);
+  text-decoration: underline;
+  font-size: 11px;
+  padding-inline-start: 6px;
+}
+.privacy {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 9px !important;
+}
+.privacy svg {
+  margin-inline-end: 6px;
+}
+.error {
+  color: var(--rust);
+  font-size: 11px;
+  line-height: 1.5;
+}

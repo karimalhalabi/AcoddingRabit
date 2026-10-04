@@ -1,0 +1,139 @@
+.home {
+  padding: 20px 0 30px;
+}
+.intro {
+  text-align: center;
+  padding: 15px 20px 38px;
+}
+.intro > svg {
+  color: var(--rust);
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+.intro > span {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: var(--rust);
+}
+.intro h1 {
+  font-family: var(--serif);
+  font-size: 46px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin: 17px 0;
+}
+.intro p {
+  font-size: 12px;
+  color: var(--muted);
+}
+.shops {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+.shop {
+  height: 410px;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: start;
+  padding: 0;
+}
+.shop > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s;
+  filter: saturate(0.7);
+}
+.shop:hover > img {
+  transform: scale(1.04);
+}
+.shop > div {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(0deg, #232019e8, transparent 75%);
+  padding: 28px;
+  color: #fff;
+}
+.shop > div > span {
+  font-size: 9px;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+.shop h2 {
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 400;
+  margin: 9px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shop h2 svg {
+  font-size: 19px;
+}
+.shop p {
+  font-size: 10px;
+  opacity: 0.75;
+}
+.number {
+  position: absolute;
+  top: 22px;
+  inset-inline-start: 25px;
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+.note {
+  padding: 40px 15px;
+  text-align: center;
+}
+.note h2 {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 400;
+}
+.note p {
+  font-size: 11px;
+  color: var(--muted);
+  margin: 14px 0 22px;
+}
+@media (max-width: 800px) {
+  .shops {
+    gap: 15px;
+  }
+  .shop {
+    height: 330px;
+  }
+  .shop > div {
+    padding: 20px;
+  }
+  .shop h2 {
+    font-size: 22px;
+  }
+  .intro h1 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 550px) {
+  .shops {
+    grid-template-columns: 1fr;
+  }
+  .shop {
+    height: 310px;
+  }
+  .intro h1 {
+    font-size: 32px;
+  }
+  .intro p {
+    line-height: 1.9;
+  }
+  .shop h2 {
+    font-size: 29px;
+  }
+}

@@ -1,0 +1,24 @@
+.quantity {
+  display: inline-flex;
+  height: 39px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 106px;
+  background: var(--paper);
+}
+.quantity button {
+  height: 100%;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+}
+.quantity span {
+  min-width: 18px;
+  text-align: center;
+  font-size: 12px;
+}
+.quantity svg {
+  width: 12px;
+}

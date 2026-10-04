@@ -1,0 +1,56 @@
+{
+  "name": "atelier-multi-shop",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"npm:server\" \"npm:dev:web\"",
+    "dev:web": "vite --host 0.0.0.0",
+    "start": "concurrently -k -n api,web \"npm:server\" \"npm:start:react\"",
+    "start:react": "node scripts/start-react.cjs",
+    "server": "node --env-file-if-exists=.env server/index.cjs",
+    "build": "vite build",
+    "build:react": "react-scripts build",
+    "test": "node --test server/api.test.cjs",
+    "benchmark": "node scripts/benchmark.cjs",
+    "format": "prettier --write src server scripts *.mjs *.json *.md",
+    "format:check": "prettier --check src server scripts *.mjs *.json *.md"
+  },
+  "proxy": "http://127.0.0.1:4000",
+  "dependencies": {
+    "@tanstack/react-query": "^5.104.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.2.1",
+    "helmet": "^8.1.0",
+    "morgan": "^1.10.1",
+    "multer": "^2.0.2",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-hot-toast": "^2.6.0",
+    "react-icons": "^5.7.0",
+    "serve-favicon": "^2.5.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "latest",
+    "concurrently": "latest",
+    "prettier": "^3.9.9",
+    "react-scripts": "5.0.1",
+    "vite": "^8.3.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=24.14.0"
+  }
+}

@@ -1,0 +1,290 @@
+.header {
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  inset-inline: 0;
+  height: 100px;
+  background: var(--paper);
+  padding: 0 4.3%;
+}
+.topBar {
+  height: 29px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  font-size: 9px;
+  color: var(--muted);
+  letter-spacing: 0.1px;
+}
+.topMessage {
+  letter-spacing: 1.8px;
+  font-size: 8px;
+  margin-inline-start: -80px;
+}
+.language {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.language button {
+  padding: 0;
+  font-size: 9px;
+  color: var(--muted);
+}
+.language button[aria-pressed="true"] {
+  color: var(--ink);
+  font-weight: 700;
+}
+.mainBar {
+  height: 71px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+}
+.brand > svg {
+  height: 40px;
+  width: 40px;
+  color: var(--rust);
+  stroke-width: 2px;
+}
+.brand > span {
+  font-family: var(--serif);
+  font-size: 36px;
+  letter-spacing: -1.8px;
+  font-weight: 500;
+  line-height: 1;
+}
+.brandDot {
+  color: var(--rust);
+}
+.brandCaption {
+  font-size: 10px;
+  color: var(--muted);
+  max-width: 140px;
+  line-height: 1.65;
+  border-inline-start: 1px solid var(--line);
+  padding-inline-start: 21px;
+}
+.shopWrap {
+  position: relative;
+  margin: auto;
+}
+.shopButton {
+  min-width: 218px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 7px 12px;
+  text-align: start;
+  background: #fffdfa;
+}
+.shopButton > svg {
+  margin-inline-start: auto;
+  width: 13px;
+  color: var(--muted);
+}
+.shopMonogram {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  background: #f0e7dd;
+  color: var(--rust);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  border-radius: 3px;
+}
+.shopButton strong,
+.shopMenu strong {
+  font-weight: 550;
+  font-size: 12px;
+  display: block;
+}
+.shopButton small,
+.shopMenu small {
+  font-size: 9px;
+  color: var(--muted);
+  display: block;
+  margin-top: 2px;
+}
+.actions {
+  display: flex;
+  gap: 23px;
+  align-items: center;
+}
+.iconButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+}
+.iconButton > svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 1.4;
+}
+.desktopText {
+  font-size: 10px;
+}
+.isActive {
+  color: var(--rust);
+}
+.bagCount {
+  background: var(--rust);
+  color: white;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  font-size: 9px;
+  display: grid;
+  place-items: center;
+}
+.divider {
+  height: 23px;
+  width: 1px;
+  background: var(--line);
+  margin-inline: -4px;
+}
+.accountButton {
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  font-size: 12px;
+  color: #66645b;
+}
+.shopMenu {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 18px;
+  background: var(--paper);
+  box-shadow: 0 14px 40px #30251920;
+  z-index: 40;
+}
+.menuLabel {
+  text-transform: uppercase;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+.shopMenu > button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 0;
+  text-align: start;
+  border-bottom: 1px solid var(--line);
+}
+.shopMenu > button > svg {
+  margin-inline-start: auto;
+  color: var(--rust);
+  width: 14px;
+}
+.shopMenu > p {
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 15px;
+}
+@media (min-width: 1600px) {
+  .header {
+    padding-inline: calc((100% - 1460px) / 2);
+  }
+}
+@media (max-width: 800px) {
+  .brandCaption,
+  .desktopText,
+  .topMessage {
+    display: none;
+  }
+  .mainBar {
+    gap: 15px;
+  }
+  .brand > span {
+    font-size: 28px;
+  }
+  .brand > svg {
+    width: 30px;
+  }
+  .shopButton {
+    min-width: 180px;
+  }
+  .actions {
+    gap: 15px;
+  }
+}
+@media (max-width: 520px) {
+  .header {
+    padding: 0 18px;
+  }
+  .shopButton {
+    min-width: 0;
+    padding: 6px;
+    border: 0;
+    background: transparent;
+    gap: 5px;
+  }
+  .shopMonogram {
+    display: none;
+  }
+  .shopButton strong {
+    font-size: 11px;
+  }
+  .shopButton small {
+    font-size: 8px;
+  }
+  .shopButton > svg {
+    width: 10px;
+  }
+  .mainBar {
+    gap: 8px;
+  }
+  .brand {
+    gap: 3px;
+  }
+  .brand > span {
+    font-size: 25px;
+  }
+  .brand > svg {
+    width: 25px;
+  }
+  .actions {
+    gap: 12px;
+  }
+  .divider {
+    display: none;
+  }
+  .accountButton {
+    width: 26px;
+    height: 26px;
+  }
+  .shopMenu {
+    width: 280px;
+  }
+  .shopMenu .shopMonogram {
+    display: grid;
+  }
+  .topBar {
+    font-size: 8px;
+  }
+  .actions .iconButton:first-child {
+    display: none;
+  }
+}

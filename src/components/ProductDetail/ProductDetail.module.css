@@ -1,0 +1,245 @@
+.detail {
+  background: #f2efe8;
+  border: 1px solid #e6e1d7;
+  border-radius: 4px;
+  overflow: hidden;
+  align-self: start;
+  position: sticky;
+  top: 18px;
+  animation: appear 0.35s ease;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 16px;
+  font-size: 7px;
+  letter-spacing: 1.2px;
+  color: #7b796b;
+}
+.heading > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #8e674f;
+}
+.heading svg {
+  font-size: 13px;
+}
+.heading > span:last-child {
+  font-size: 6px;
+  color: #9c9688;
+}
+.detailImage {
+  height: 200px;
+  position: relative;
+  margin: 0 13px;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #e1d8cb;
+}
+.detailImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 48%;
+  filter: saturate(0.65);
+}
+.detailImage > span {
+  position: absolute;
+  bottom: 12px;
+  inset-inline-start: 12px;
+  background: #fcfaf0e8;
+  padding: 5px 9px;
+  border-radius: 2px;
+  font-size: 7px;
+}
+.detailImage button {
+  position: absolute;
+  top: 10px;
+  inset-inline-end: 10px;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  background: #fbf8eed9;
+  font-size: 12px;
+  color: var(--rust);
+}
+.body {
+  padding: 18px;
+}
+.category {
+  font-size: 8px;
+  letter-spacing: 0.7px;
+  color: #929083;
+}
+.title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 7px 0 12px;
+}
+.title h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: -0.4px;
+}
+.title strong {
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.description {
+  font-size: 10px;
+  line-height: 1.9;
+  color: #8a8679;
+}
+.finish {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.finish > span {
+  font-size: 9px;
+  color: #8c887b;
+}
+.finish strong {
+  display: block;
+  font-size: 9px;
+  color: #58584e;
+  font-weight: 400;
+  margin-top: 4px;
+}
+.swatches {
+  display: flex;
+  gap: 6px;
+}
+.swatches > span {
+  width: 15px;
+  height: 15px;
+  background: #bc784f;
+  border-radius: 50%;
+  border: 2px solid #f2efe8;
+}
+.swatches > span:nth-child(2) {
+  background: #d7cdb9;
+}
+.swatches > span:nth-child(3) {
+  background: #636658;
+}
+.swatches .swatchSelected {
+  outline: 1px solid #b37654;
+}
+.quantityRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 18px 0 13px;
+  font-size: 10px;
+}
+.quantityRow > div {
+  height: 31px;
+  min-width: 92px;
+}
+.addButton {
+  width: 100%;
+  padding: 11px 12px;
+  font-size: 10px;
+  min-height: 41px;
+  gap: 8px;
+}
+.addButton > svg {
+  font-size: 13px;
+}
+.addButton > span {
+  margin-inline-start: auto;
+  padding-inline-start: 10px;
+  border-inline-start: 1px solid #ffffff50;
+}
+.stock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: #838572;
+  font-size: 7px;
+  margin-top: 10px;
+}
+.stock > i {
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+}
+.inStock {
+  background: #858e63;
+}
+.outOfStock {
+  background: var(--rust);
+}
+.shipping {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 19px 0;
+  font-size: 8px;
+  color: #838374;
+}
+.shipping p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.shipping svg {
+  font-size: 12px;
+}
+.accordion {
+  border-top: 1px solid #ddd9cf;
+}
+.accordion summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  list-style: none;
+  font-size: 9px;
+  padding: 13px 0;
+}
+.accordion summary::-webkit-details-marker {
+  display: none;
+}
+.accordion p {
+  font-size: 10px;
+  line-height: 1.8;
+  color: var(--muted);
+  padding-bottom: 12px;
+}
+.accordion[open] summary svg {
+  transform: rotate(180deg);
+}
+@keyframes appear {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (min-width: 1500px) {
+  .detailImage {
+    height: 230px;
+  }
+  .body {
+    padding: 22px;
+  }
+  .title h2 {
+    font-size: 24px;
+  }
+  .description {
+    font-size: 11px;
+  }
+}
