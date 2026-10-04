@@ -1,0 +1,47 @@
+[
+  {
+    "id": "hearth",
+    "name": "The Little Hearth",
+    "nameAr": "الموقد الصغير",
+    "keeper": "Pip's forest provisions",
+    "keeperAr": "مؤن بيب للغابة",
+    "type": "strength",
+    "price": 80,
+    "unlock": 1,
+    "item": "Ember elixir",
+    "itemAr": "إكسير الجمر",
+    "description": "Restore 35 strength for the road ahead.",
+    "descriptionAr": "استعد ٣٥ نقطة قوة لرحلتك.",
+    "icon": "potion"
+  },
+  {
+    "id": "river",
+    "name": "Riverstone Trading",
+    "nameAr": "متجر حجر النهر",
+    "keeper": "A little protection goes a long way",
+    "keeperAr": "قليل من الحماية يفيد كثيراً",
+    "type": "shield",
+    "price": 120,
+    "unlock": 4,
+    "item": "Riverstone shield",
+    "itemAr": "درع حجر النهر",
+    "description": "Block the next three water-ball hits.",
+    "descriptionAr": "احمِ نفسك من كرات الماء الثلاث التالية.",
+    "icon": "shield"
+  },
+  {
+    "id": "sky",
+    "name": "The Skyward Atelier",
+    "nameAr": "مشغل السماء",
+    "keeper": "For the dragon you were meant to be",
+    "keeperAr": "لتصبح التنين الذي حلمت به",
+    "type": "wings",
+    "price": 300,
+    "unlock": 10,
+    "item": "Your very own wings",
+    "itemAr": "جناحاك الخاصان",
+    "description": "Unlock flight and reach your home in the clouds.",
+    "descriptionAr": "افتح الطيران واصل إلى منزلك بين السحب.",
+    "icon": "wings"
+  }
+]

@@ -1,0 +1,103 @@
+.shopCard {
+  border: 1px solid #e2e5d7;
+  border-radius: 12px;
+  padding: 22px 18px;
+  background: #fcfcf5;
+  display: flex;
+  flex-direction: column;
+}
+.shopIcon {
+  height: 93px;
+  background: radial-gradient(ellipse, #ede3bd, transparent 68%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a88b50;
+  position: relative;
+}
+.shopIcon > span {
+  position: absolute;
+  top: 13px;
+  right: 22%;
+  color: #c9ab6d;
+  font-size: 24px;
+}
+.shopCard h3 {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 500;
+  margin: 13px 0 7px;
+}
+.shopCard > small {
+  font-size: 9px;
+  color: #92967e;
+  min-height: 26px;
+  line-height: 1.6;
+}
+.itemDetails {
+  border-top: 1px solid #e7e8d9;
+  margin: 16px 0;
+  padding-top: 17px;
+}
+.itemDetails strong {
+  font-size: 12px;
+  font-weight: 600;
+  color: #697653;
+}
+.itemDetails p {
+  font-size: 11px;
+  line-height: 1.8;
+  color: #92967e;
+  margin: 8px 0;
+  min-height: 58px;
+}
+.price {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #bd8550;
+  font-size: 18px;
+  margin-top: auto;
+}
+.price span {
+  font-size: 8px;
+  color: #999c8a;
+  margin-inline-start: auto;
+}
+.shopCard button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+  background: #e77b46;
+  color: #fff8e8;
+  padding: 11px;
+  border-radius: 7px;
+  font-size: 11px;
+}
+.shopCard button:disabled {
+  background: #e9ecdf;
+  color: #959e83;
+  cursor: not-allowed;
+}
+@media (max-width: 650px) {
+  .shopCard {
+    padding: 13px;
+  }
+  .shopIcon {
+    height: 45px;
+  }
+  .shopCard h3 {
+    font-size: 20px;
+  }
+  .itemDetails {
+    margin: 10px 0;
+    padding-top: 10px;
+  }
+  .itemDetails p {
+    min-height: 0;
+  }
+  .shopCard > small {
+    min-height: 0;
+  }
+}
