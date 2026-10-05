@@ -1,0 +1,193 @@
+.steps {
+  display: flex;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 20px 25px;
+  margin-bottom: 24px;
+}
+.steps button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  text-align: start;
+  gap: 12px;
+  background: none;
+  border: 0;
+  color: #99a6b5;
+  padding: 0;
+  font-size: 12px;
+}
+.steps button > span {
+  height: 33px;
+  width: 33px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #f1f4f8;
+  font-size: 11px;
+}
+.steps button > div {
+  flex: 1;
+}
+.steps small {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.steps button > svg {
+  margin-inline-end: 20px;
+  color: #c4cdd8;
+}
+.steps .currentStep {
+  color: var(--blue);
+  font-weight: 600;
+}
+.currentStep > span {
+  background: #e6f0fd !important;
+  color: var(--blue);
+}
+.steps .completeStep {
+  color: #64a38a;
+}
+.completeStep > span {
+  background: #e9f6f0 !important;
+}
+.summaryStrip {
+  display: flex;
+  justify-content: space-around;
+  padding: 23px 20px;
+  background: #edf3fa;
+  border: 1px solid #dfe9f4;
+  border-radius: 10px;
+  margin-bottom: 22px;
+}
+.summaryStrip > span {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 10px;
+  color: #8398b1;
+}
+.summaryStrip strong {
+  font-size: 18px;
+  color: var(--navy);
+}
+.summaryStrip svg {
+  font-size: 16px;
+  margin-inline-end: 5px;
+  color: #6b8bae;
+}
+.groupGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.groupCard {
+  text-align: start;
+  border: 1px solid #e5eaf1;
+  border-radius: 8px;
+  padding: 14px;
+  background: #fcfdff;
+  color: var(--navy);
+}
+.groupCard:hover {
+  border-color: #8bafd8;
+  background: #f5f9ff;
+}
+.groupCard > span {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.groupCard strong {
+  font-size: 12px;
+}
+.groupCard small {
+  font-size: 9px;
+  color: #99a5b3;
+}
+.groupCard svg {
+  margin-inline-start: auto;
+  font-size: 11px;
+  color: #a2b5cb;
+}
+.groupCard p {
+  font-size: 10px;
+  color: #7a8ea5;
+  line-height: 1.7;
+  margin: 12px 0;
+  max-height: 52px;
+  overflow: hidden;
+}
+.groupCard em {
+  font-size: 8px;
+  background: #eaf1fa;
+  color: #7891b0;
+  padding: 3px 6px;
+  border-radius: 3px;
+  font-style: normal;
+}
+.subjectChoices {
+  max-height: 400px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.subjectChoices label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--line);
+  padding: 10px;
+  border-radius: 7px;
+}
+.subjectChoices small {
+  display: block;
+  color: #95a4b5;
+  font-size: 10px;
+  margin-top: 4px;
+}
+@media (max-width: 800px) {
+  .steps {
+    padding: 17px;
+  }
+  .steps button {
+    gap: 7px;
+    font-size: 10px;
+  }
+  .steps button > span {
+    width: 27px;
+    height: 27px;
+    flex-shrink: 0;
+  }
+  .steps button > svg {
+    margin-inline-end: 10px;
+    font-size: 10px;
+  }
+  .groupGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .summaryStrip {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+@media (max-width: 500px) {
+  .steps button {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 9px;
+  }
+  .steps button > svg {
+    display: none;
+  }
+  .groupGrid {
+    grid-template-columns: 1fr;
+  }
+  .summaryStrip strong {
+    font-size: 15px;
+  }
+}
