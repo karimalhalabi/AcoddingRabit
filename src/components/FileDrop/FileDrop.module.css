@@ -1,0 +1,47 @@
+.dropZone {
+  border: 1.5px dashed #c6d7e7;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f8fbff, #fbfcfe);
+  text-align: center;
+  padding: 32px 16px;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+.dragging {
+  border-color: var(--blue);
+  background: #e5f0ff;
+}
+.fileIcon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  background: #e9f1fb;
+  color: var(--blue);
+  font-size: 23px;
+  border-radius: 12px;
+  margin: 0 auto 15px;
+}
+.dropZone h3 {
+  font-size: 14px;
+  margin-bottom: 9px;
+}
+.dropZone p {
+  font-size: 12px;
+  color: #8793a4;
+}
+.dropZone button {
+  border: 0;
+  background: none;
+  color: var(--blue);
+  padding: 0;
+  font-weight: 650;
+}
+.dropZone small {
+  display: block;
+  font-size: 9px;
+  margin-top: 15px;
+  color: #a2abba;
+  letter-spacing: 0.4px;
+}

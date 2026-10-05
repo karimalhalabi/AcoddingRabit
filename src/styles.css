@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap");
+:root {
+  font-family: "DM Sans", "Noto Sans Arabic", sans-serif;
+  color: #253951;
+  background: #f7f9fc;
+  font-synthesis: none;
+  --blue: #0058a8;
+  --navy: #183655;
+  --gold: #fdca2f;
+  --muted: #8793a4;
+  --line: #e8edf2;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+button,
+a,
+input,
+select {
+  outline-offset: 4px;
+}
+button {
+  cursor: pointer;
+  transition:
+    background 0.18s,
+    transform 0.18s,
+    box-shadow 0.18s;
+}
+button:active {
+  transform: translateY(1px);
+}
+button:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+a {
+  color: var(--blue);
+}
+button svg {
+  flex-shrink: 0;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+h1,
+h2,
+h3 {
+  font-family: "Manrope", "Noto Sans Arabic", sans-serif;
+}
+input,
+select {
+  border: 1px solid #dfe6ee;
+  border-radius: 7px;
+  padding: 11px 12px;
+  background: #fff;
+  color: var(--navy);
+  width: 100%;
+  font-size: 12px;
+}
+input:focus,
+select:focus {
+  outline: 2px solid #94bee5;
+  outline-offset: 1px;
+}
+label {
+  font-size: 12px;
+  line-height: 1.5;
+}
+label > input,
+label > select {
+  margin-top: 7px;
+}
+input[type="checkbox"] {
+  width: auto;
+  accent-color: var(--blue);
+}
+::selection {
+  background: #fff0b0;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #e5b325;
+}
+::-webkit-scrollbar {
+  width: 7px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d8e0e8;
+  border-radius: 5px;
+}
+::view-transition-old(root) {
+  animation: fadeOut 0.15s;
+}
+::view-transition-new(root) {
+  animation: fadeIn 0.2s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *:before,
+  *:after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

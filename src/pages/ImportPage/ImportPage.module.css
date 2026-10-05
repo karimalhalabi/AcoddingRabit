@@ -1,0 +1,77 @@
+.importLayout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 25px;
+  margin-top: 30px;
+  align-items: start;
+}
+.instructions {
+  background: #edf3fb;
+  border: 1px solid #e0e9f3;
+  border-radius: 12px;
+  padding: 30px;
+}
+.instructionIcon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  background: #dfeafa;
+  border-radius: 10px;
+  color: var(--blue);
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+.instructions h2 {
+  font-size: 19px;
+  letter-spacing: -0.4px;
+  margin-bottom: 25px;
+}
+.instructionStep {
+  display: flex;
+  gap: 14px;
+  margin: 20px 0;
+}
+.instructionStep > span {
+  color: #98aec9;
+  font-size: 11px;
+  padding-top: 3px;
+}
+.instructionStep h3 {
+  font-size: 12px;
+  margin-bottom: 7px;
+}
+.instructionStep p {
+  font-size: 11px;
+  line-height: 1.9;
+  color: #8195af;
+}
+.importResult {
+  text-align: center;
+  padding: 25px 12px 5px;
+}
+.importResult > svg {
+  font-size: 30px;
+  color: #65a88c;
+  margin-bottom: 15px;
+}
+.importResult h3 {
+  font-size: 16px;
+}
+.importResult p {
+  font-size: 11px;
+  color: #93a0b1;
+  margin: 12px 0 20px;
+}
+.importResult small {
+  font-size: 10px;
+  line-height: 1.7;
+  color: #8c9cb0;
+  display: block;
+  margin-top: 15px;
+}
+@media (max-width: 800px) {
+  .importLayout {
+    grid-template-columns: 1fr;
+  }
+}

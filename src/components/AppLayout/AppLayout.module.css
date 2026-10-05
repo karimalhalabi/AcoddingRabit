@@ -1,0 +1,283 @@
+.appShell {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  height: 100px;
+  min-height: 100px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4.2%;
+  border-bottom: 1px solid #edf0f3;
+}
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border: 0;
+  background: none;
+  color: var(--navy);
+  font-size: 35px;
+  letter-spacing: -1.8px;
+  font-weight: 800;
+  text-align: start;
+}
+.brandDot {
+  color: var(--gold);
+}
+.brand small {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 2.4px;
+  margin-top: 1px;
+  font-weight: 650;
+  color: #8190a5;
+}
+.brandMark {
+  display: grid;
+  grid-template-columns: 12px 12px;
+  grid-template-rows: 10px 15px;
+  gap: 4px;
+  padding: 11px;
+  border-radius: 13px;
+  background: var(--blue);
+  transform: rotate(-5deg);
+}
+.brandMark i {
+  background: var(--gold);
+  border-radius: 2px;
+}
+.brandMark i:first-child {
+  grid-column: span 2;
+}
+.headerRight {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.workspaceLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #6e7c8e;
+}
+.workspaceDot,
+.savedDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #54a38a;
+  display: inline-block;
+}
+.languageButton {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 0;
+  background: none;
+  font-size: 12px;
+  color: var(--navy);
+}
+.headerDivider {
+  width: 1px;
+  height: 27px;
+  background: var(--line);
+}
+.profileButton {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  background: none;
+  border: 0;
+  text-align: start;
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 600;
+}
+.profileButton small {
+  display: block;
+  margin-top: 5px;
+  font-size: 10px;
+  color: var(--muted);
+  font-weight: 400;
+}
+.profileButton > svg {
+  margin-inline-start: 15px;
+  color: var(--muted);
+}
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #eaf0f8;
+  font-size: 13px;
+  border: 3px solid #f6f8fc;
+}
+.logoutButton {
+  border: 0;
+  background: none;
+  color: var(--muted);
+}
+.navBar {
+  height: 25px;
+  min-height: 25px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4.2%;
+  border-bottom: 1px solid var(--line);
+}
+.navLinks {
+  display: flex;
+  gap: 29px;
+}
+.navLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: 0;
+  color: #798496;
+  font-size: 10px;
+  padding: 0 0 5px;
+  white-space: nowrap;
+}
+.navLink svg {
+  font-size: 12px;
+}
+.activeLink {
+  color: var(--blue);
+  font-weight: 700;
+}
+.activeLink:after {
+  content: "";
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--blue);
+}
+.navNote {
+  font-size: 9px;
+  color: #8b96a5;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding-bottom: 5px;
+}
+.navNote span {
+  color: #d4aa32;
+  font-size: 16px;
+}
+.mainContent {
+  flex: 1;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+.footer {
+  height: 75px;
+  min-height: 75px;
+  background: white;
+  border-top: 1px solid var(--line);
+  padding: 0 4.2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #8b96a6;
+  font-size: 10px;
+}
+.footer > div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.footerLogo {
+  font-size: 21px;
+  letter-spacing: -1px;
+  font-weight: 750;
+  color: var(--navy);
+}
+.footerLogo span {
+  color: var(--gold);
+}
+.footerSeparator {
+  height: 19px;
+  width: 1px;
+  background: var(--line);
+  margin: 0 4px;
+}
+.footer .footerRight {
+  gap: 7px;
+}
+.copyright {
+  margin-inline-start: 20px;
+  font-size: 9px;
+}
+@media (min-width: 1600px) {
+  .header,
+  .navBar,
+  .footer {
+    padding-inline: calc((100vw - 1460px) / 2);
+  }
+}
+@media (max-width: 800px) {
+  .workspaceLabel,
+  .navNote,
+  .headerDivider,
+  .profileButton > span:nth-child(2),
+  .profileButton > svg,
+  .footerRight .copyright {
+    display: none;
+  }
+  .headerRight {
+    gap: 16px;
+  }
+  .brand {
+    font-size: 30px;
+  }
+  .header {
+    padding-inline: 5%;
+  }
+  .navLinks {
+    gap: 20px;
+  }
+  .footer {
+    padding-inline: 5%;
+  }
+  .footer > div {
+    gap: 8px;
+  }
+  .footer .footerRight {
+    font-size: 9px;
+    max-width: 145px;
+  }
+  .footerLogo {
+    display: none;
+  }
+  .footerSeparator {
+    display: none;
+  }
+}
+@media (max-width: 420px) {
+  .navLinks {
+    gap: 15px;
+  }
+  .navLink {
+    font-size: 9px;
+    gap: 4px;
+  }
+  .footer > div:first-child {
+    max-width: 125px;
+  }
+  .headerRight {
+    gap: 9px;
+  }
+}

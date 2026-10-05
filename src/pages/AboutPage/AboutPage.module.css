@@ -1,0 +1,86 @@
+.aboutHero {
+  position: relative;
+  overflow: hidden;
+  padding: 55px;
+  border-radius: 14px;
+  background: linear-gradient(115deg, #073d6d, #075daa);
+  color: white;
+  margin: 20px 0 25px;
+}
+.overline {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #b3d1e9;
+}
+.aboutHero h1 {
+  font-size: 46px;
+  letter-spacing: -1.5px;
+  line-height: 1.25;
+  margin: 18px 0;
+}
+.aboutHero h1 span {
+  color: #ffdb62;
+}
+.aboutHero p {
+  max-width: 500px;
+  font-size: 12px;
+  line-height: 1.9;
+  color: #b4cce2;
+  margin-bottom: 25px;
+}
+.heroSpark {
+  position: absolute;
+  font-size: 260px;
+  right: 45px;
+  top: -10px;
+  color: #ffffff09;
+  transform: rotate(14deg);
+}
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.featureIcon {
+  background: #eff4fc;
+  color: #7599c3;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 9px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.featureGrid h2 {
+  font-size: 15px;
+  letter-spacing: -0.4px;
+  margin-bottom: 12px;
+}
+.featureGrid p,
+.explanation {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #8b9aac;
+}
+.explanation {
+  margin-top: 15px;
+  max-width: 1000px;
+}
+@media (max-width: 800px) {
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+  .featureGrid article {
+    margin-bottom: 0;
+  }
+  .featureGrid {
+    margin-bottom: 20px;
+  }
+  .aboutHero {
+    padding: 30px;
+  }
+  .aboutHero h1 {
+    font-size: 34px;
+  }
+}

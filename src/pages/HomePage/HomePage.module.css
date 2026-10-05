@@ -1,0 +1,836 @@
+.welcomeBanner {
+  height: 224px;
+  border-radius: 12px;
+  background: linear-gradient(110deg, #073c6b 0%, #0759a3 75%, #1a6aad 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin-bottom: 24px;
+}
+.bannerContent {
+  padding: 26px 32px;
+  z-index: 1;
+}
+.bannerEyebrow {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  letter-spacing: 1.6px;
+  font-size: 8px;
+  color: #a1c8e9;
+  font-weight: 500;
+}
+.bannerEyebrow i {
+  width: 5px;
+  height: 5px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+.bannerContent h2 {
+  font-size: 28px;
+  line-height: 1.25;
+  letter-spacing: -0.7px;
+  font-weight: 650;
+  margin: 12px 0 10px;
+}
+.bannerContent p {
+  font-size: 10px;
+  color: #abc7e0;
+  line-height: 1.8;
+}
+.bannerContent button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #ffdb60;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin-top: 14px;
+}
+.bannerContent button:hover {
+  gap: 21px;
+}
+.bannerIllustration {
+  width: 48%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.orbitOne,
+.orbitTwo {
+  position: absolute;
+  border: 1px solid #ffffff12;
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+  top: -63px;
+  right: 35px;
+}
+.orbitTwo {
+  width: 450px;
+  height: 450px;
+  top: -110px;
+  right: -12px;
+}
+.miniCalendar {
+  width: 262px;
+  padding: 14px 15px 18px;
+  background: #fafcff;
+  border: 4px solid #ffffff20;
+  background-clip: padding-box;
+  border-radius: 10px;
+  transform: rotate(-7deg);
+  box-shadow: 0 10px 30px #092f5830;
+  position: relative;
+  animation: calendarFloat 7s ease-in-out infinite;
+}
+.miniHead {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-bottom: 1px solid #eaf0f6;
+  padding-bottom: 10px;
+  color: #59758f;
+}
+.miniHead > span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #ced9e3;
+}
+.miniHead > span:nth-child(2) {
+  background: var(--gold);
+}
+.miniHead b {
+  font-size: 6px;
+  margin-inline-start: 9px;
+  letter-spacing: 0.6px;
+}
+.miniHead svg {
+  margin-inline-start: auto;
+  font-size: 10px;
+  color: #a4b5c6;
+}
+.miniDays {
+  display: flex;
+  justify-content: space-around;
+  font-size: 5px;
+  font-weight: 700;
+  color: #92a0b2;
+  padding: 12px 0 8px;
+}
+.miniGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+}
+.miniGrid > span {
+  height: 27px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 7px;
+}
+.miniGrid i {
+  height: 3px;
+  width: 80%;
+  background: #ffffffba;
+  border-radius: 2px;
+}
+.miniGrid em {
+  height: 2px;
+  width: 55%;
+  background: #ffffff90;
+  border-radius: 2px;
+}
+.block0 {
+  background: #baa9d7;
+}
+.block1 {
+  background: #a5cbbb;
+}
+.block2 {
+  background: #edf1f6;
+}
+.block3 {
+  background: #e6c18b;
+}
+.block4 {
+  background: #9dbde1;
+}
+.block5 {
+  background: #d6a9b7;
+}
+.floatBadge {
+  position: absolute;
+  bottom: 24px;
+  right: 15%;
+  padding: 10px 16px 10px 10px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px #0a3f6830;
+  transform: rotate(3deg);
+  color: #3c576d;
+  font-size: 9px;
+  font-weight: 650;
+}
+.floatBadge > span {
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: #e8f6ee;
+  color: #60a588;
+  font-size: 14px;
+}
+.floatBadge small {
+  display: block;
+  font-size: 7px;
+  color: #95a6b2;
+  font-weight: 400;
+  margin-top: 4px;
+}
+.littleBadge {
+  position: absolute;
+  top: 29px;
+  left: 5%;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: #ffffff19;
+  backdrop-filter: blur(4px);
+  padding: 8px 10px;
+  border: 1px solid #ffffff24;
+  border-radius: 6px;
+  transform: rotate(3deg);
+  color: #e0edf6;
+  font-size: 7px;
+}
+.littleBadge svg {
+  color: var(--gold);
+  font-size: 12px;
+}
+.sparkOne {
+  position: absolute;
+  color: #ffdb59;
+  font-size: 26px;
+  right: 17%;
+  top: 31px;
+}
+.sparkTwo {
+  position: absolute;
+  color: #a4c7de;
+  font-size: 27px;
+  bottom: 34px;
+  left: 16%;
+}
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 30px;
+}
+.scheduleHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  gap: 15px;
+}
+.titleWithTag {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.titleWithTag h2 {
+  font-size: 18px;
+  letter-spacing: -0.6px;
+  font-weight: 750;
+}
+.liveBadge {
+  background: #eaf4ee;
+  color: #729d83;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 8px;
+}
+.liveBadge i {
+  width: 4px;
+  height: 4px;
+  background: #73a58a;
+  border-radius: 50%;
+}
+.scheduleHeading p {
+  color: #96a0af;
+  font-size: 10px;
+  margin-top: 7px;
+}
+.termBadge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  color: #7c8ba0;
+  margin-inline-end: 8px;
+}
+.scheduleWorkspace {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 18px;
+}
+.roomSidebar {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.roomTabs {
+  display: flex;
+  gap: 11px;
+  padding: 17px 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.roomTabs button {
+  border: 0;
+  background: none;
+  color: #8c98a7;
+  padding: 0 0 13px;
+  font-size: 10px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  position: relative;
+}
+.roomTabs .selectedTab {
+  color: var(--blue);
+  font-weight: 650;
+}
+.selectedTab:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--blue);
+}
+.roomTabs span {
+  background: #f2f5fa;
+  font-size: 8px;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-weight: 500;
+  color: #9da8b6;
+}
+.roomSearch {
+  display: flex;
+  align-items: center;
+  margin: 13px 13px 8px;
+  position: relative;
+}
+.roomSearch svg {
+  position: absolute;
+  inset-inline-start: 9px;
+  color: #a7b2bf;
+  font-size: 11px;
+}
+.roomSearch input {
+  padding: 8px 8px 8px 27px;
+  font-size: 9px;
+  border-radius: 5px;
+  background: #fafbfd;
+  border-color: #edf0f4;
+  margin: 0;
+}
+.roomList {
+  padding: 0 8px;
+  max-height: 493px;
+  overflow: auto;
+}
+.roomButton {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  text-align: start;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 10px 9px;
+  margin: 3px 0;
+  background: #fff;
+  color: #63768c;
+  font-size: 10px;
+  font-weight: 500;
+}
+.roomButton > svg {
+  margin-inline-start: auto;
+  color: #b3c0cd;
+  font-size: 10px;
+  opacity: 0;
+}
+.roomIcon {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 28px;
+  border-radius: 5px;
+  background: #f7f9fc;
+  color: #90a1b4;
+  font-size: 12px;
+}
+.roomButton small {
+  display: block;
+  font-size: 8px;
+  font-weight: 400;
+  margin-top: 4px;
+  color: #9da8b5;
+}
+.roomButton:hover {
+  background: #f7f9fd;
+}
+.roomButton.selectedRoom {
+  background: #eef5ff;
+  border: 1px solid #dae8f9;
+  color: var(--blue);
+  font-weight: 650;
+}
+.selectedRoom .roomIcon {
+  background: #dfeafb;
+  color: var(--blue);
+}
+.selectedRoom > svg {
+  opacity: 1;
+  color: var(--blue);
+}
+.sidebarNote {
+  margin: auto 15px 17px;
+  display: flex;
+  gap: 8px;
+  border-top: 1px solid #edf1f5;
+  padding-top: 15px;
+  color: #a0adbd;
+  font-size: 8px;
+  line-height: 1.7;
+}
+.sidebarNote svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-size: 11px;
+}
+.timetablePanel {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.roomHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 20px;
+  border-bottom: 1px solid var(--line);
+}
+.roomTitle {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.roomTitleIcon {
+  width: 32px;
+  height: 35px;
+  border-radius: 7px;
+  background: #edf3fc;
+  display: grid;
+  place-items: center;
+  color: #618dc0;
+  font-size: 16px;
+}
+.roomTitle h3 {
+  font-size: 13px;
+  font-weight: 650;
+}
+.roomTitle p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 8px;
+  margin-top: 6px;
+  color: #93a0b0;
+}
+.roomTitle p > span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.roomTitle p i {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: #aeb7c4;
+}
+.weekControl {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 9px;
+  color: #7f8fa2;
+}
+.weekControl button {
+  display: grid;
+  place-items: center;
+  padding: 5px;
+  background: white;
+  border: 1px solid #e5eaf0;
+  border-radius: 5px;
+  color: #7f8fa2;
+}
+.weekControl button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.scheduleBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  gap: 12px;
+}
+.scheduleBottom > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 9px;
+  color: #729581;
+}
+.scheduleBottom small {
+  display: block;
+  font-size: 8px;
+  color: #9faab8;
+  margin-top: 4px;
+}
+.statusCircle {
+  height: 25px;
+  width: 25px;
+  border: 1px solid #d7e9e0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #7caa91;
+  font-size: 12px;
+}
+.utilization {
+  font-size: 9px;
+  color: #8f9cad;
+  margin-inline-end: 12px;
+}
+.warningButton {
+  background: #fff5df;
+  color: #a0813a;
+  border: 1px solid #f2e5c4;
+  border-radius: 5px;
+  padding: 5px 8px;
+  font-size: 9px;
+  display: flex;
+  gap: 5px;
+}
+.helpStrip {
+  margin-top: 26px;
+  padding: 18px 21px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f0f4f9;
+  border: 1px solid #e7edf5;
+  border-radius: 8px;
+  font-size: 10px;
+  color: #8394a9;
+}
+.helpStrip span,
+.helpStrip button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.helpStrip span > svg {
+  font-size: 15px;
+  color: #7994b4;
+}
+.helpStrip button {
+  background: none;
+  border: 0;
+  color: #447bad;
+  font-size: 10px;
+  font-weight: 500;
+}
+.unplacedList {
+  max-height: 350px;
+  overflow: auto;
+}
+.unplacedList > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-bottom: 1px solid var(--line);
+  padding: 12px 0;
+  font-size: 11px;
+}
+.unplacedList span {
+  color: var(--muted);
+  font-size: 10px;
+}
+.savedList {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.savedList button {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: start;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fafc;
+  padding: 16px;
+  color: var(--blue);
+}
+.savedList span {
+  flex: 1;
+}
+.savedList strong {
+  font-size: 12px;
+  display: block;
+}
+.savedList small {
+  font-size: 10px;
+  color: var(--muted);
+  display: block;
+  margin-top: 7px;
+}
+@keyframes calendarFloat {
+  0%,
+  100% {
+    transform: rotate(-7deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-5deg) translateY(-5px);
+  }
+}
+@media (min-width: 1500px) {
+  .welcomeBanner {
+    height: 242px;
+  }
+  .bannerContent {
+    padding-top: 30px;
+  }
+  .bannerContent h2 {
+    font-size: 32px;
+  }
+  .miniCalendar {
+    width: 290px;
+  }
+  .miniGrid > span {
+    height: 31px;
+  }
+}
+@media (max-width: 1050px) {
+  .scheduleWorkspace {
+    grid-template-columns: 175px minmax(0, 1fr);
+    gap: 12px;
+  }
+  .roomTabs {
+    gap: 8px;
+    padding-inline: 10px;
+  }
+  .termBadge {
+    display: none;
+  }
+  .miniCalendar {
+    width: 230px;
+  }
+  .bannerContent h2 {
+    font-size: 26px;
+  }
+  .floatBadge {
+    right: 8%;
+  }
+  .statsGrid {
+    gap: 10px;
+  }
+  .utilization {
+    display: none;
+  }
+  .scheduleHeading .titleWithTag {
+    gap: 8px;
+  }
+  .titleWithTag h2 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 800px) {
+  .welcomeBanner {
+    height: 216px;
+  }
+  .bannerContent {
+    padding: 24px;
+  }
+  .bannerContent h2 {
+    font-size: 25px;
+  }
+  .bannerIllustration {
+    width: 45%;
+  }
+  .miniCalendar {
+    width: 200px;
+  }
+  .littleBadge {
+    display: none;
+  }
+  .floatBadge {
+    right: 3%;
+    bottom: 25px;
+    padding: 8px;
+  }
+  .sparkOne {
+    right: 8%;
+    top: 28px;
+  }
+  .statsGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .scheduleWorkspace {
+    grid-template-columns: 1fr;
+  }
+  .roomSidebar {
+    display: block;
+  }
+  .roomTabs {
+    padding: 12px 15px 0;
+    gap: 20px;
+  }
+  .roomSearch,
+  .sidebarNote {
+    display: none;
+  }
+  .roomList {
+    display: flex;
+    overflow: auto;
+    padding: 5px 10px;
+  }
+  .roomButton {
+    min-width: 140px;
+  }
+  .scheduleBottom small {
+    max-width: 190px;
+    line-height: 1.5;
+  }
+  .liveBadge {
+    display: none;
+  }
+  .helpStrip {
+    gap: 15px;
+    align-items: flex-start;
+  }
+  .helpStrip span {
+    max-width: 210px;
+    line-height: 1.6;
+  }
+  .helpStrip button {
+    line-height: 1.6;
+    text-align: end;
+  }
+}
+@media (max-width: 550px) {
+  .bannerContent {
+    padding: 22px;
+  }
+  .bannerContent h2 {
+    font-size: 25px;
+  }
+  .bannerContent p {
+    font-size: 9px;
+    max-width: 220px;
+  }
+  .bannerIllustration {
+    position: absolute;
+    right: -112px;
+    top: 20px;
+    width: 260px;
+    opacity: 0.22;
+    transform: rotate(10deg);
+  }
+  .bannerContent {
+    z-index: 2;
+  }
+  .bannerContent button {
+    font-size: 10px;
+  }
+  .welcomeBanner {
+    height: 220px;
+  }
+  .scheduleHeading {
+    align-items: center;
+    gap: 8px;
+  }
+  .scheduleHeading p {
+    max-width: 180px;
+    font-size: 9px;
+    line-height: 1.6;
+  }
+  .scheduleHeading h2 {
+    font-size: 15px;
+  }
+  .scheduleHeading button {
+    padding: 10px;
+    font-size: 9px;
+  }
+  .roomHeader {
+    padding: 16px;
+  }
+  .roomTitle p {
+    font-size: 7px;
+    gap: 5px;
+  }
+  .weekControl {
+    gap: 5px;
+  }
+  .scheduleBottom {
+    align-items: flex-start;
+  }
+  .scheduleBottom > div:first-child {
+    font-size: 8px;
+  }
+  .scheduleBottom .statusCircle {
+    display: none;
+  }
+  .scheduleBottom > div:last-child {
+    justify-content: flex-end;
+  }
+  .scheduleBottom button {
+    font-size: 9px;
+  }
+  .helpStrip {
+    padding: 15px;
+  }
+  .helpStrip button {
+    font-size: 9px;
+    max-width: 140px;
+  }
+}

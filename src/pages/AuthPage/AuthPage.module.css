@@ -1,0 +1,156 @@
+.authLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+  margin: 25px auto;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  overflow: hidden;
+  min-height: 570px;
+}
+.authStory {
+  background: linear-gradient(135deg, #073d6d, #0961ad);
+  padding: 45px 38px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.authStory:after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border: 1px solid #ffffff10;
+  border-radius: 50%;
+  bottom: -150px;
+  right: -150px;
+}
+.storyLabel {
+  font-size: 8px;
+  letter-spacing: 1.8px;
+  color: #aecbe4;
+}
+.authStory h1 {
+  font-size: 30px;
+  line-height: 1.4;
+  letter-spacing: -1px;
+  margin: 30px 0 17px;
+}
+.authStory h1 > span {
+  color: #ffdc67;
+}
+.authStory p {
+  font-size: 11px;
+  color: #a9c6df;
+  line-height: 1.9;
+}
+.storyCards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 35px 0;
+}
+.storyCards > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ffffff18;
+  background: #ffffff06;
+  padding: 14px;
+  border-radius: 7px;
+  font-size: 10px;
+  color: #d6e5f1;
+}
+.storyCards > div > svg:first-child {
+  font-size: 15px;
+  color: #95bcdb;
+}
+.storyCards > div > svg:last-child {
+  margin-inline-start: auto;
+  color: #ffdb62;
+}
+.storyBottom {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-top: auto;
+}
+.storyBottom > span {
+  color: var(--gold);
+}
+.authForm {
+  padding: 45px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.authIcon {
+  display: grid;
+  place-items: center;
+  background: #eef4fc;
+  color: #6492c7;
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  font-size: 20px;
+  margin-bottom: 22px;
+}
+.authForm h2 {
+  font-size: 23px;
+  letter-spacing: -0.8px;
+}
+.authForm > p {
+  font-size: 11px;
+  line-height: 1.8;
+  color: #91a0b2;
+  margin: 11px 0 25px;
+}
+.authForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.authForm form > button {
+  margin-top: 4px;
+  justify-content: space-between;
+  padding: 13px 16px;
+}
+.switchAuth {
+  font-size: 11px;
+  color: #97a4b5;
+  text-align: center;
+  margin-top: 25px;
+}
+.switchAuth button {
+  font-size: 11px;
+  color: var(--blue);
+  border: 0;
+  background: none;
+  font-weight: 600;
+}
+.guestLink {
+  border: 0;
+  background: none;
+  color: #99a9bc;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+@media (max-width: 700px) {
+  .authLayout {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+  .authStory {
+    display: none;
+  }
+  .authForm {
+    padding: 35px 25px;
+  }
+}
